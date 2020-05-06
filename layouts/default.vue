@@ -1,12 +1,9 @@
-<template>
-  <div>
-    <NavBar />
-    <nuxt />
-
-    <div class="btn">
-      <Sourcecode />
-    </div>
-  </div>
+<template lang="pug">
+  div
+    NavBar
+    .btn
+      Sourcecode
+    nuxt
 </template>
 <script>
 import NavBar from '~/components/NavBar.vue';
