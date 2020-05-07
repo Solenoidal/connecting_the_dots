@@ -1,18 +1,20 @@
-<template lang="pug">
-  div
-    NavBar
-    .btn
-      Sourcecode
-    nuxt
+<template>
+  <div>
+    <NavBar />
+    <div class="btn">
+      <SourceCode />
+    </div>
+    <nuxt />
+  </div>
 </template>
 <script>
 import NavBar from '~/components/NavBar.vue';
-import Sourcecode from '~/components/Button/Sourcecode';
+import SourceCode from '~/components/Button/Sourcecode.vue';
 
 export default {
   components: {
     NavBar,
-    Sourcecode
+    SourceCode
   }
 };
 </script>

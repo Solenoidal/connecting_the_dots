@@ -1,7 +1,8 @@
-<template lang="pug">
-  div(class="flex flex-col items-center")
-    h1.text-6xl CONNECTING THE DOTS
-    Logo
+<template>
+  <div class="flex flex-col items-center">
+    <h1 class="text-6xl">CONNECTING THE DOTS</h1>
+    <Logo />
+  </div>
 </template>
 
 <script>
