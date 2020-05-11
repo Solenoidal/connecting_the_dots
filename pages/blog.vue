@@ -1,15 +1,15 @@
 <template>
   <div>
-    <ul>
-      <li v-for="post in posts" :key="post.id">
-        <h2>{{ post.title }}</h2>
-      </li>
-    </ul>
+    <card-list :posts="posts" />
   </div>
 </template>
 <script>
+import CardList from '~/components/CardList.vue';
 import { posts } from '~/contents/blog.service';
 export default {
+  components: {
+    CardList
+  },
   data() {
     return {
       posts
