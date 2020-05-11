@@ -3,7 +3,7 @@
     "contents/blog/02/index.json": {
       "name": "02",
       "title": "Javascript thisと格闘する",
-      "publishedAt": "2020-05-11",
+      "publishedAt": "2020-05-11T00:00:00.000Z",
       "updatedAt": null,
       "id": "02",
       "description": "",
@@ -17,7 +17,7 @@
     "contents/blog/hello_nuxt_app/index.json": {
       "name": "hello_nuxt_app",
       "title": "Nuxtアプリでブログはじめました",
-      "publishedAt": "2020-05-11",
+      "publishedAt": "2020-05-11T00:00:00.000Z",
       "updatedAt": null,
       "id": "hello_nuxt_app",
       "description": "Nuxtを使ってブログを構築するまでの流れを説明します",
