@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "md2json": "processmd './contents/blog/**/*.md' --outputDir './contents/blog/' --stdout > './contents/summary.json'"
   },
   "lint-staged": {
     "*.{js,vue}": "yarn lint",
@@ -42,6 +43,7 @@
     "jest": "^24.1.0",
     "lint-staged": "^10.0.0",
     "prettier": "^1.19.1",
+    "processmd": "^4.5.0",
     "stylelint": "^10.1.0",
     "vue-jest": "^4.0.0-0"
   }

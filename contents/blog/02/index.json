@@ -1,0 +1,16 @@
+{
+  "name": "02",
+  "title": "Javascript thisと格闘する",
+  "publishedAt": "2020-05-11",
+  "updatedAt": null,
+  "id": "02",
+  "description": "",
+  "draft": false,
+  "bodyContent": "## こんにちは\n\nんふぁいえんぎあ",
+  "bodyHtml": "<h2>こんにちは</h2>\n<p>んふぁいえんぎあ</p>\n",
+  "dir": "contents/blog/02",
+  "base": "index.json",
+  "ext": ".json",
+  "sourceBase": "index.md",
+  "sourceExt": ".md"
+}
