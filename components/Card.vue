@@ -25,12 +25,12 @@
     </div>
 
     <footer class="text-right card__footer">
-      <time class="card__publishedAt">
-        <template v-if="date.publishedAt">
-          投稿日 {{ date.publishedAt }}
-        </template>
-        <template v-if="date.updatedAt"> 更新日 {{ date.updatedAt }} </template>
-      </time>
+      <template v-if="date.publishedAt">
+        <time class="publishedAt"> 投稿日 {{ date.publishedAt }} </time>
+      </template>
+      <template v-if="date.updatedAt">
+        <time class="updatedAt"> 更新日 {{ date.updatedAt }} </time>
+      </template>
     </footer>
   </div>
 </template>
