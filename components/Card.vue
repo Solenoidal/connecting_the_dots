@@ -1,25 +1,27 @@
 <template>
   <div class="w-1/2 p-2 m-2 border border-black rounded-lg card">
-    <div class="card__header">
-      <img src="" alt="" class="card__image" />
-      <ul class="flex tags_container">
-        <li
-          v-for="tag in tags"
-          :key="tag"
-          class="px-2 py-1 mx-1 text-xs bg-orange-300 rounded-lg tag"
-        >
-          {{ tag }}
-        </li>
-      </ul>
-    </div>
+    <div class="action_area hover:cursor-pointer">
+      <div class="card__header">
+        <img src="" alt="" class="card__image" />
+        <ul class="flex tags_container">
+          <li
+            v-for="tag in tags"
+            :key="tag"
+            class="px-2 py-1 mx-1 text-xs bg-orange-300 rounded-lg tag"
+          >
+            {{ tag }}
+          </li>
+        </ul>
+      </div>
 
-    <div class="card__body">
-      <h2 class="text-2xl card__title">
-        {{ title }}
-      </h2>
-      <p class="card__description">
-        {{ description }}
-      </p>
+      <div class="card__body">
+        <h2 class="text-2xl card__title">
+          {{ title }}
+        </h2>
+        <p class="card__description">
+          {{ description }}
+        </p>
+      </div>
     </div>
 
     <footer class="text-right card__footer">
