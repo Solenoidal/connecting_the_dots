@@ -25,11 +25,11 @@
     </div>
 
     <footer class="text-right card__footer">
-      <template v-if="date.publishedAt">
-        <time class="publishedAt"> 投稿日 {{ date.publishedAt }} </time>
+      <template v-if="publishedAt">
+        <time class="publishedAt"> 投稿日 {{ publishedAt }} </time>
       </template>
-      <template v-if="date.updatedAt">
-        <time class="updatedAt"> 更新日 {{ date.updatedAt }} </time>
+      <template v-if="updatedAt">
+        <time class="updatedAt"> 更新日 {{ updatedAt }} </time>
       </template>
     </footer>
   </div>
@@ -53,18 +53,6 @@ export default {
     },
     tags: {
       type: Array
-    }
-  },
-  computed: {
-    date() {
-      function getDateFromString(dateString) {
-        if (!dateString) return false;
-        return dateString.split('-').join('/');
-      }
-      return {
-        publishedAt: getDateFromString(this.publishedAt),
-        updatedAt: getDateFromString(this.updatedAt)
-      };
     }
   }
 };
