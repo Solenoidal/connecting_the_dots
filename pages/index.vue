@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(class="flex flex-col items-center")
+  .flex.flex-col.items-center
     h1.text-6xl CONNECTING THE DOTS
     Logo
 </template>
