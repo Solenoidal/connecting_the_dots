@@ -1,7 +1,9 @@
-<template lang="pug">
-  .nav.flex.justify-center
-    nav
-      nuxt-link(to="/") Home
-      |  | 
-      nuxt-link(to="/blog") Blog
+<template>
+  <div class="flex justify-center nav">
+    <nav>
+      <nuxt-link to="/">HOME</nuxt-link>
+      |
+      <nuxt-link to="/blog">BLOG</nuxt-link>
+    </nav>
+  </div>
 </template>

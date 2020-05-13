@@ -1,22 +1,31 @@
-<template lang="pug">
-  div
-    NavBar
-    .btn
-      Sourcecode
-    nuxt
+<template>
+  <div>
+    <NavBar />
+    <div class="btn">
+      <SourceCode />
+    </div>
+    <nuxt />
+  </div>
 </template>
 <script>
 import NavBar from '~/components/NavBar.vue';
-import Sourcecode from '~/components/Button/Sourcecode';
+import SourceCode from '~/components/Button/Sourcecode.vue';
 
 export default {
   components: {
     NavBar,
-    Sourcecode
+    SourceCode
   }
 };
 </script>
 <style>
+html {
+  font-size: 16px;
+}
+body {
+  background-color: #e7f6ff;
+  padding: 0 1.25rem;
+}
 .btn {
   position: fixed;
   bottom: 1rem;
