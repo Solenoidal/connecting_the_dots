@@ -2,7 +2,9 @@
   <div>
     <div class="tag_list">
       <span v-for="tag in tags" :key="tag">
-        <span class="inline-block p-1 mx-1 border border-black rounded-md">
+        <span
+          class="inline-block p-1 mx-1 bg-white border border-black rounded-md"
+        >
           #{{ tag }}
         </span>
       </span>
