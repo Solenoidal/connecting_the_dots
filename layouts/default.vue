@@ -19,6 +19,9 @@ export default {
 };
 </script>
 <style>
+body {
+  background-color: #ecf8ff;
+}
 .btn {
   position: fixed;
   bottom: 1rem;
