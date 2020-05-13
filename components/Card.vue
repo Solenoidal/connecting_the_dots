@@ -1,5 +1,5 @@
 <template>
-  <div class="w-1/2 p-2 m-2 border border-black rounded-lg card">
+  <div class="p-2 m-2 border border-black rounded-lg  card">
     <div class="action_area hover:cursor-pointer">
       <div class="card__header">
         <img src="" alt="" class="card__image" />

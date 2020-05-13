@@ -1,6 +1,7 @@
 import blogInfo from '~/contents/summary.json';
 
 export const posts = getMetaInfo(blogInfo);
+export const tags = getTags();
 
 /**
  * convert YYYY-MM-DD -> YYYY/MM/DD
@@ -27,4 +28,18 @@ function getMetaInfo(blogJSON) {
     post.updatedAt = convertDataString(post.updatedAt);
   });
   return blogArray.filter((post) => post.draft === false);
+}
+
+/**
+ * @return {Array} - tags extracted from all posts
+ */
+function getTags() {
+  const tags = [];
+  const posts = getMetaInfo(blogInfo);
+  posts.forEach((post) => {
+    if (post.tags) {
+      post.tags.forEach((tag) => tags.push(tag));
+    }
+  });
+  return tags.sort();
 }
