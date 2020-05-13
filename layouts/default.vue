@@ -19,8 +19,12 @@ export default {
 };
 </script>
 <style>
+html {
+  font-size: 16px;
+}
 body {
-  background-color: #ecf8ff;
+  background-color: #e7f6ff;
+  padding: 0 1.25rem;
 }
 .btn {
   position: fixed;
