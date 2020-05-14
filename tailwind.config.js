@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     fontFamily: {
       title: ['"M PLUS 1p"', 'sans-serif'],
+      date: ['"M PLUS 1p"', 'sans-serif'],
       tag_mini: ['"Quicksand"', 'sans-serif']
     }
   },

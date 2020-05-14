@@ -28,9 +28,11 @@
       </div>
 
       <footer class="mx-5 text-right card__footer">
-        <div class="text-xs date">
+        <div class="date">
           <template v-if="publishedAt">
-            <time class="publishedAt"> 投稿日 {{ publishedAt }} </time>
+            <time class="publishedAt date__text">
+              投稿日 {{ publishedAt }}
+            </time>
           </template>
           <template v-if="updatedAt">
             <time class="updatedAt"> 更新日 {{ updatedAt }} </time>
@@ -85,7 +87,7 @@ export default {
 .date {
   color: #5894bf;
 }
-/* font setting */
+/* font */
 .tag__text {
   @apply font-tag_mini font-normal;
 }
@@ -98,6 +100,12 @@ export default {
 }
 .card__title {
   font-size: 1.125rem;
+  line-height: 100%;
+}
+.date__text {
+  @apply text-xs font-date font-normal;
+}
+.date__text {
   line-height: 100%;
 }
 </style>
