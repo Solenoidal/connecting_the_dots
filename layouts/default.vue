@@ -9,7 +9,7 @@
 </template>
 <script>
 import NavBar from '~/components/NavBar.vue';
-import SourceCode from '~/components/Button/Sourcecode.vue';
+import SourceCode from '~/components/Button/SourceCode.vue';
 
 export default {
   components: {
