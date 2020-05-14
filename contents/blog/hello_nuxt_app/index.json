@@ -1,6 +1,6 @@
 {
-  "name": "hello_nuxt_app",
   "title": "Nuxtアプリでブログはじめました",
+  "slug": "hello_nuxt_app",
   "publishedAt": "2020-05-11",
   "updatedAt": null,
   "id": "hello_nuxt_app",

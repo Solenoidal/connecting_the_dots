@@ -1,6 +1,6 @@
 ---
-name: '02'
 title: 'Javascript thisと格闘する'
+slug: 'javascript-struggling-this'
 publishedAt: '2020-05-11'
 updatedAt:
 tags:
