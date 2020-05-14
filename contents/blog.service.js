@@ -2,6 +2,7 @@ import blogSummary from '~/contents/summary.json';
 
 export const posts = getMetaData(blogSummary);
 export const tags = getTags(blogSummary);
+export const sourceFileArray = blogSummary.sourceFileArray;
 
 /**
  * convert YYYY-MM-DD -> YYYY/MM/DD
