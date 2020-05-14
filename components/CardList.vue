@@ -4,6 +4,7 @@
       v-for="post in posts"
       :key="post.id"
       :title="post.title"
+      :slug="post.slug"
       :published-at="post.publishedAt"
       :updated-at="post.updatedAt"
       :description="post.description"

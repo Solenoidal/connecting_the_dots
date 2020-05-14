@@ -2,29 +2,31 @@
   <div>
     <div class="rounded-lg card">
       <div class="action_area hover:cursor-pointer">
-        <div class="relative card__header">
-          <div class="pt-5 mx-5 card__image">
-            <img src="https://placehold.jp/237x99.png" alt="" />
+        <nuxt-link :to="link(date, slug)">
+          <div class="relative card__header">
+            <div class="pt-5 mx-5 card__image">
+              <img src="https://placehold.jp/237x99.png" alt="" />
+            </div>
+            <ul class="absolute flex ml-3 tags__container">
+              <li
+                v-for="tag in tags"
+                :key="tag"
+                class="px-2 py-1 mr-2 bg-white border border-black tag__container tag__text"
+              >
+                #{{ tag }}
+              </li>
+            </ul>
           </div>
-          <ul class="absolute flex ml-3 tags__container">
-            <li
-              v-for="tag in tags"
-              :key="tag"
-              class="px-2 py-1 mr-2 bg-white border border-black tag__container tag__text"
-            >
-              #{{ tag }}
-            </li>
-          </ul>
-        </div>
 
-        <div class="mx-5 card__body">
-          <h2 class="card__title">
-            {{ title }}
-          </h2>
-          <p class="text-sm card__description">
-            {{ description }}
-          </p>
-        </div>
+          <div class="mx-5 card__body">
+            <h2 class="card__title">
+              {{ title }}
+            </h2>
+            <p class="text-sm card__description">
+              {{ description }}
+            </p>
+          </div>
+        </nuxt-link>
       </div>
 
       <footer class="mx-5 text-right card__footer">
@@ -50,6 +52,9 @@ export default {
     title: {
       type: String
     },
+    slug: {
+      type: String
+    },
     publishedAt: {
       type: String
     },
@@ -61,6 +66,16 @@ export default {
     },
     tags: {
       type: Array
+    }
+  },
+  computed: {
+    date() {
+      return this.publishedAt.split('/').join('-');
+    }
+  },
+  methods: {
+    link(date, slug) {
+      return `/blog/${date}/${slug}`;
     }
   }
 };
