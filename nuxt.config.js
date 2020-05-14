@@ -13,8 +13,7 @@ export default {
         name: 'description',
         content: process.env.npm_package_description || ''
       }
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -46,8 +45,18 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    // Doc: https://github.com/Developmint/nuxt-webfontloader
+    'nuxt-webfontloader'
   ],
+  /**
+   * webfontloader module configuration
+   */
+  webfontloader: {
+    google: {
+      families: ['M+PLUS+1p:400,500', 'Quicksand:400']
+    }
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
@@ -57,6 +66,11 @@ export default {
    ** Build configuration
    */
   build: {
+    // postcss: {
+    //   plugins: {
+    //      'postcss-cssnext': {}
+    //   }
+    // },
     /*
      ** You can extend webpack config here
      */

@@ -6,11 +6,11 @@
           <div class="pt-5 mx-5 card__image">
             <img src="https://placehold.jp/237x99.png" alt="" />
           </div>
-          <ul class="absolute flex ml-3 tags_container">
+          <ul class="absolute flex ml-3 tags__container">
             <li
               v-for="tag in tags"
               :key="tag"
-              class="px-2 py-1 mr-2 bg-white border border-black tag"
+              class="px-2 py-1 mr-2 bg-white border border-black tag__container tag__text"
             >
               #{{ tag }}
             </li>
@@ -18,7 +18,7 @@
         </div>
 
         <div class="mx-5 card__body">
-          <h2 class="text-2xl card__title">
+          <h2 class="card__title">
             {{ title }}
           </h2>
           <p class="text-sm card__description">
@@ -64,9 +64,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .card {
-  /* background: #000; */
   box-shadow: 4px 7px 4px #adcadb, -4px -7px 4px white;
 }
 .card {
@@ -80,16 +79,25 @@ export default {
 .card > :nth-last-child(1) {
   padding-bottom: 0.625rem;
 }
-.tags_container {
+.tags__container {
   bottom: 6px;
-}
-.tag {
-  font-size: 0.625rem;
-}
-.card__title {
-  font-size: 1.125rem;
 }
 .date {
   color: #5894bf;
+}
+/* font setting */
+.tag__text {
+  @apply font-tag_mini font-normal;
+}
+.tag__text {
+  font-size: 0.625rem;
+  line-height: 100%;
+}
+.card__title {
+  @apply font-title font-medium;
+}
+.card__title {
+  font-size: 1.125rem;
+  line-height: 100%;
 }
 </style>
