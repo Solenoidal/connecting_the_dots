@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import Vue from 'vue';
 
 /**
@@ -8,6 +9,7 @@ import Vue from 'vue';
 function date(dateString) {
   if (!dateString) return '';
   const date = new Date(dateString);
+  console.log('date', date);
   const dateFormat = new Intl.DateTimeFormat('ja', {
     year: 'numeric',
     month: '2-digit',
@@ -15,4 +17,5 @@ function date(dateString) {
   });
   return dateFormat.format(date);
 }
-Vue.filter('date', date);
+
+Vue.prototype.$date = date;
