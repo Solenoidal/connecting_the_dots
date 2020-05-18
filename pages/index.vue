@@ -24,6 +24,11 @@ export default {
       posts,
       tags
     };
+  },
+  head() {
+    return {
+      title: 'HOME'
+    };
   }
 };
 </script>
