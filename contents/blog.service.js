@@ -1,6 +1,6 @@
 import blogSummary from '~/contents/summary.json';
 
-export const posts = getMetaData(blogSummary);
+export const blogs = getMetaData(blogSummary);
 export const tags = getTags(blogSummary);
 export const sourceFileArray = blogSummary.sourceFileArray;
 
@@ -21,12 +21,12 @@ function getMetaData(blogJSON) {
 
 /**
  * @param {JSON} blogJSON blogs meta data
- * @return {Array} tags extracted from all posts
+ * @return {Array} tags extracted from all blogs
  */
 function getTags(blogJSON) {
   const tags = [];
-  const posts = getMetaData(blogJSON);
-  posts.forEach((post) => {
+  const blogs = getMetaData(blogJSON);
+  blogs.forEach((post) => {
     if (post.tags) {
       post.tags.forEach((tag) => tags.push(tag));
     }

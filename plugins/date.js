@@ -6,10 +6,9 @@ import Vue from 'vue';
  * @param {string} dateString
  * @return {string} "YYYY/MM/DD"
  */
-function date(dateString) {
+export function date(dateString) {
   if (!dateString) return '';
   const date = new Date(dateString);
-  console.log('date', date);
   const dateFormat = new Intl.DateTimeFormat('ja', {
     year: 'numeric',
     month: '2-digit',

@@ -1,15 +1,6 @@
 <template>
   <div>
-    <Card
-      v-for="post in posts"
-      :key="post.id"
-      :title="post.title"
-      :slug="post.slug"
-      :published-at="post.publishedAt"
-      :updated-at="post.updatedAt"
-      :description="post.description"
-      :tags="post.tags"
-    />
+    <Card v-for="blog in blogs" :key="blog.id" :blog="blog" />
   </div>
 </template>
 
@@ -18,7 +9,7 @@ import Card from '~/components/Card';
 export default {
   components: { Card },
   props: {
-    posts: {
+    blogs: {
       type: Array,
       required: true
     }

@@ -9,19 +9,19 @@
         </span>
       </span>
     </div>
-    <card-list :posts="posts" />
+    <card-list :blogs="blogs" />
   </div>
 </template>
 <script>
 import CardList from '~/components/CardList.vue';
-import { posts, tags } from '~/contents/blog.service';
+import { blogs, tags } from '~/contents/blog.service';
 export default {
   components: {
     CardList
   },
   data() {
     return {
-      posts,
+      blogs,
       tags
     };
   },
