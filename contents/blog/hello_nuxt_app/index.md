@@ -1,7 +1,7 @@
 ---
 title: Nuxtアプリでブログはじめました
 slug: 'hello_nuxt_app'
-publishedAt: '2020-05-11'
+publishedAt: 2020-05-11
 updatedAt:
 id: "hello_nuxt_app"
 description: Nuxtを使ってブログを構築するまでの流れを説明します

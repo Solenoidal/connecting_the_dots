@@ -3,7 +3,7 @@
     "contents/blog/hello_nuxt_app/index.json": {
       "title": "Nuxtアプリでブログはじめました",
       "slug": "hello_nuxt_app",
-      "publishedAt": "2020-05-11",
+      "publishedAt": "2020-05-11T00:00:00.000Z",
       "updatedAt": null,
       "id": "hello_nuxt_app",
       "description": "Nuxtを使ってブログを構築するまでの流れを説明します",
@@ -17,7 +17,7 @@
     "contents/blog/02/index.json": {
       "title": "Javascript thisと格闘する",
       "slug": "02",
-      "publishedAt": "2020-05-11",
+      "publishedAt": "2020-05-11T00:00:00.000Z",
       "updatedAt": null,
       "tags": [
         "JavaScript",
