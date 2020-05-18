@@ -2,7 +2,7 @@
   <div class="blog">
     <h1 class="text-2xl blog__title">{{ title }}</h1>
     <div class="text-sm text-center blog__date">
-      投稿日/{{ publishedAt }} 更新日/{{ updatedAt }}
+      投稿日/{{ publishedAt | date }} 更新日/{{ updatedAt | date }}
     </div>
     <div class="blog__body" v-html="bodyHtml"></div>
   </div>

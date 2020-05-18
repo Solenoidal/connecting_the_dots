@@ -33,7 +33,7 @@
         <div class="date">
           <template v-if="publishedAt">
             <time class="publishedAt date__text">
-              投稿日 {{ publishedAt }}
+              投稿日 {{ publishedAt | date }}
             </time>
           </template>
           <template v-if="updatedAt">
@@ -66,11 +66,6 @@ export default {
     },
     tags: {
       type: Array
-    }
-  },
-  computed: {
-    date() {
-      return this.publishedAt.split('/').join('-');
     }
   },
   methods: {
