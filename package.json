@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest",
+    "test": "NODE_ICU_DATA=node_modules/full-icu jest --verbose",
     "md2json": "processmd './contents/blog/**/*.md' --outputDir './contents/blog/' --stdout > './contents/summary.json'"
   },
   "lint-staged": {
@@ -41,6 +41,7 @@
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.1.2",
+    "full-icu": "^1.3.1",
     "husky": "^4.0.0",
     "jest": "^24.1.0",
     "lint-staged": "^10.0.0",
