@@ -3,6 +3,7 @@
     <NavBar />
     <div class="btn">
       <SourceCode />
+      <Control />
     </div>
     <nuxt />
   </div>
@@ -10,11 +11,13 @@
 <script>
 import NavBar from '~/components/NavBar.vue';
 import SourceCode from '~/components/Button/SourceCode.vue';
+import Control from '~/components/Button/Control.vue';
 
 export default {
   components: {
     NavBar,
-    SourceCode
+    SourceCode,
+    Control
   },
   head() {
     return {
