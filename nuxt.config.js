@@ -66,6 +66,7 @@ export default {
    ** Build configuration
    */
   build: {
+    headSource: true,
     // postcss: {
     //   plugins: {
     //      'postcss-cssnext': {}
