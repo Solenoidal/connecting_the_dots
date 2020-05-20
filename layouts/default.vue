@@ -9,12 +9,26 @@
 </template>
 <script>
 import NavBar from '~/components/NavBar.vue';
-import SourceCode from '~/components/Button/Sourcecode.vue';
+import SourceCode from '~/components/Button/SourceCode.vue';
 
 export default {
   components: {
     NavBar,
     SourceCode
+  },
+  head() {
+    return {
+      titleTemplate: '%s - CONNECTING THE DOTS',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: ''
+        }
+      ]
+    };
   }
 };
 </script>

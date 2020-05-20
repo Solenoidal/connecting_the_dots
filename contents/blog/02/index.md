@@ -1,7 +1,7 @@
 ---
-name: '02'
 title: 'Javascript thisと格闘する'
-publishedAt: '2020-05-11'
+slug: '02'
+publishedAt: 2020-05-11
 updatedAt:
 tags:
   - JavaScript

@@ -26,7 +26,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/date.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -66,6 +66,7 @@ export default {
    ** Build configuration
    */
   build: {
+    headSource: true,
     // postcss: {
     //   plugins: {
     //      'postcss-cssnext': {}

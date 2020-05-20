@@ -1,24 +1,34 @@
 <template>
-  <div class="flex flex-col items-center">
-    <h1 class="text-6xl">CONNECTING THE DOTS</h1>
-    <Logo />
+  <div>
+    <div class="tag_list">
+      <span v-for="tag in tags" :key="tag">
+        <span
+          class="inline-block p-1 mx-1 bg-white border border-black rounded-md"
+        >
+          #{{ tag }}
+        </span>
+      </span>
+    </div>
+    <card-list :blogs="blogs" />
   </div>
 </template>
-
 <script>
-import Logo from '~/components/Logo.vue';
-
+import CardList from '~/components/CardList.vue';
+import { blogs, tags } from '~/contents/blog.service';
 export default {
   components: {
-    Logo
+    CardList
+  },
+  data() {
+    return {
+      blogs,
+      tags
+    };
+  },
+  head() {
+    return {
+      title: 'HOME'
+    };
   }
 };
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-</style>

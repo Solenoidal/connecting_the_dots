@@ -2,29 +2,31 @@
   <div>
     <div class="rounded-lg card">
       <div class="action_area hover:cursor-pointer">
-        <div class="relative card__header">
-          <div class="pt-5 mx-5 card__image">
-            <img src="https://placehold.jp/237x99.png" alt="" />
+        <nuxt-link :to="link">
+          <div class="relative card__header">
+            <div class="pt-5 mx-5 card__image">
+              <img src="https://placehold.jp/237x99.png" alt="" />
+            </div>
+            <ul class="absolute flex ml-3 tags__container">
+              <li
+                v-for="tag in blog.tags"
+                :key="tag"
+                class="px-2 py-1 mr-2 bg-white border border-black tag__container tag__text"
+              >
+                #{{ tag }}
+              </li>
+            </ul>
           </div>
-          <ul class="absolute flex ml-3 tags__container">
-            <li
-              v-for="tag in tags"
-              :key="tag"
-              class="px-2 py-1 mr-2 bg-white border border-black tag__container tag__text"
-            >
-              #{{ tag }}
-            </li>
-          </ul>
-        </div>
 
-        <div class="mx-5 card__body">
-          <h2 class="card__title">
-            {{ title }}
-          </h2>
-          <p class="text-sm card__description">
-            {{ description }}
-          </p>
-        </div>
+          <div class="mx-5 card__body">
+            <h2 class="card__title">
+              {{ blog.title }}
+            </h2>
+            <p class="text-sm card__description">
+              {{ blog.description }}
+            </p>
+          </div>
+        </nuxt-link>
       </div>
 
       <footer class="mx-5 text-right card__footer">
@@ -44,23 +46,24 @@
 </template>
 
 <script>
-/* eslint-disable vue/require-default-prop */
 export default {
   props: {
-    title: {
-      type: String
+    blog: {
+      type: Object,
+      required: true
+    }
+  },
+  computed: {
+    publishedAt() {
+      return this.$date(this.blog.publishedAt);
     },
-    publishedAt: {
-      type: String
+    updatedAt() {
+      return this.$date(this.blog.updatedAt);
     },
-    updatedAt: {
-      type: String
-    },
-    description: {
-      type: String
-    },
-    tags: {
-      type: Array
+    link() {
+      const date = this.publishedAt.split('/').join('-');
+      const slug = this.blog.slug;
+      return `/blog/${date}/${slug}`;
     }
   }
 };
