@@ -1,23 +1,41 @@
 <template>
   <div>
-    <NavBar />
-    <div class="btn">
-      <SourceCode />
-      <Control />
+    <div v-show="isControlActive">
+      <control-nav @clickControlNav="switchControlState" />
     </div>
-    <nuxt />
+    <div v-show="!isControlActive">
+      <nav-bar />
+      <nuxt />
+    </div>
+    <div class="fixed flex flex-col items-end btn">
+      <source-code />
+      <control @clickControlBtn="switchControlState" />
+    </div>
   </div>
 </template>
+
 <script>
 import NavBar from '~/components/NavBar.vue';
 import SourceCode from '~/components/Button/SourceCode.vue';
 import Control from '~/components/Button/Control.vue';
+import ControlNav from '~/components/ControlNav.vue';
 
 export default {
   components: {
     NavBar,
     SourceCode,
-    Control
+    Control,
+    ControlNav
+  },
+  data() {
+    return {
+      isControlActive: false
+    };
+  },
+  methods: {
+    switchControlState() {
+      this.isControlActive = !this.isControlActive;
+    }
   },
   head() {
     return {
@@ -29,6 +47,13 @@ export default {
           hid: 'description',
           name: 'description',
           content: ''
+        }
+      ],
+      // font-awesome
+      script: [
+        {
+          src: 'https://kit.fontawesome.com/3a82c65957.js',
+          crossorigin: 'anonymous'
         }
       ]
     };
@@ -44,7 +69,6 @@ body {
   padding: 0 1.25rem;
 }
 .btn {
-  position: fixed;
   bottom: 1rem;
   right: 1rem;
 }
