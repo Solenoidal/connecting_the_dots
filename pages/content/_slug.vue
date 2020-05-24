@@ -3,9 +3,9 @@
     <div class="w-full">
       <article>
         <!-- title -->
-        <h1 class="mb-4 text-4xl">{{ page.title }}</h1>
+        <h1 class="mb-4 text-4xl">{{ doc.title }}</h1>
         <!-- main content -->
-        <nuxt-content :document="page" />
+        <nuxt-content :document="doc" />
       </article>
     </div>
     <!-- table of content -->
@@ -14,7 +14,7 @@
       <nav>
         <ul>
           <li
-            v-for="toc in page.toc"
+            v-for="toc in doc.toc"
             :key="toc.id"
             class="text-gray-600"
             :class="{ 'border-b': toc.depth === 2 }"
@@ -39,8 +39,8 @@ export default {
     const slug = params.slug;
 
     // 'blog/md/<dirName>/index' をパスとして渡す
-    const page = await $content(`blog/md/${slug}/index`).fetch();
-    return { page };
+    const doc = await $content(`blog/md/${slug}/index`).fetch();
+    return { doc };
   }
 };
 </script>
