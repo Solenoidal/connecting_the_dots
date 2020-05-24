@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "NODE_ICU_DATA=node_modules/full-icu jest --verbose",
-    "md2json": "processmd './contents/blog/**/*.md' --outputDir './contents/blog/' --stdout > './contents/summary.json'"
+    "md2json": "processmd './content/blog/**/*.md' --outputDir './content/blog/json/' --stdout > './content/blog/json/summary.json'"
   },
   "lint-staged": {
     "*.{js,vue}": "yarn lint",

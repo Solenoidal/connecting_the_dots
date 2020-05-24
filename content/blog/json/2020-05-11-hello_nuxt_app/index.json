@@ -1,0 +1,16 @@
+{
+  "title": "Nuxtアプリでブログはじめました",
+  "slug": "hello_nuxt_app",
+  "publishedAt": "2020-05-11T00:00:00.000Z",
+  "updatedAt": null,
+  "id": "hello_nuxt_app",
+  "description": "Nuxtを使ってブログを構築するまでの流れを説明します",
+  "draft": false,
+  "bodyContent": "## はじめまして\n\nはじめまして｡Solenoidというハンドルネームでtwitterやqiitaで活動しているものです｡\nこの度､ブログをNuxt.jsを使って作るというプロジェクトをはじめました｡\n\n## こんにちは\n\n## さようなら",
+  "bodyHtml": "<h2>はじめまして</h2>\n<p>はじめまして｡Solenoidというハンドルネームでtwitterやqiitaで活動しているものです｡\nこの度､ブログをNuxt.jsを使って作るというプロジェクトをはじめました｡</p>\n<h2>こんにちは</h2>\n<h2>さようなら</h2>\n",
+  "dir": "content/blog/json/2020-05-11-hello_nuxt_app",
+  "base": "index.json",
+  "ext": ".json",
+  "sourceBase": "index.md",
+  "sourceExt": ".md"
+}
