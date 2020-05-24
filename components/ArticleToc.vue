@@ -1,12 +1,11 @@
 <template>
-  <div class="w-full py-4">
-    <h3>目次</h3>
+  <div class="w-full py-4 text-gray-600">
+    <h3 class="text-center">目次</h3>
     <nav>
-      <ul>
+      <ol>
         <li
-          v-for="link in toc"
+          v-for="link in links"
           :key="link.id"
-          class="text-gray-600"
           :class="{ 'border-b': link.depth === 2 }"
         >
           <a
@@ -14,10 +13,10 @@
             class="block text-sm"
             :class="{ 'ml-2': link.depth === 3 }"
           >
-            {{ link.text }}
+            {{ link.prefix }}&nbsp;&nbsp;{{ link.text }}
           </a>
         </li>
-      </ul>
+      </ol>
     </nav>
   </div>
 </template>
@@ -28,6 +27,23 @@ export default {
     toc: {
       type: Array,
       required: true
+    }
+  },
+  computed: {
+    links() {
+      let depth2 = 0;
+      let depth3 = 0;
+      this.toc.forEach((link) => {
+        if (link.depth === 2) {
+          depth2++;
+          link.prefix = `${depth2}`;
+        }
+        if (link.depth === 3) {
+          depth3++;
+          link.prefix = `${depth2}.${depth3}`;
+        }
+      });
+      return this.toc;
     }
   }
 };
