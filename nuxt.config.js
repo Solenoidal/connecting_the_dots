@@ -47,8 +47,14 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     // Doc: https://github.com/Developmint/nuxt-webfontloader
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    // Doc: https://content.nuxtjs.org/
+    '@nuxt/content'
   ],
+  /**
+   * @nuxt/content module configuration
+   */
+  content: {},
   /**
    * webfontloader module configuration
    */
