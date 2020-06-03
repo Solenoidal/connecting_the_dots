@@ -29,4 +29,8 @@ export default {
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
+.nuxt-content h3 {
+}
+.nuxt-content p {
+}
 </style>
