@@ -18,10 +18,7 @@ export default {
     ArticleToc
   },
   async asyncData({ $content, params, error }) {
-    const slug = params.slug;
-
-    // 'blog/md/<dirName>/index' をパスとして渡す
-    const doc = await $content(`blog/md/${slug}/index`).fetch();
+    const doc = await $content(params.slug).fetch();
     return { doc };
   }
 };
