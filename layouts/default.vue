@@ -8,7 +8,6 @@
       <nuxt />
     </div>
     <div class="fixed flex flex-col items-end btn">
-      <source-code />
       <control
         :active="isControlActive"
         @clickControlBtn="switchControlState"
@@ -19,14 +18,12 @@
 
 <script>
 import NavBar from '~/components/NavBar.vue';
-import SourceCode from '~/components/Button/SourceCode.vue';
 import Control from '~/components/Button/Control.vue';
 import ControlNav from '~/components/ControlNav.vue';
 
 export default {
   components: {
     NavBar,
-    SourceCode,
     Control,
     ControlNav
   },
