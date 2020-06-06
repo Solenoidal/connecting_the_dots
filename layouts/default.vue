@@ -9,7 +9,10 @@
     </div>
     <div class="fixed flex flex-col items-end btn">
       <source-code />
-      <control @clickControlBtn="switchControlState" />
+      <control
+        :active="isControlActive"
+        @clickControlBtn="switchControlState"
+      />
     </div>
   </div>
 </template>

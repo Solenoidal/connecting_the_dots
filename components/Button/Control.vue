@@ -14,10 +14,11 @@
 
 <script>
 export default {
-  data() {
-    return {
-      active: false
-    };
+  props: {
+    active: {
+      type: Boolean,
+      required: true
+    }
   },
   methods: {
     navOpen() {
