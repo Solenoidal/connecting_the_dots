@@ -34,18 +34,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-ul > :nth-child(n) {
-  margin-bottom: 2rem;
-}
-.sns__container > li {
-  margin-right: 1rem;
-  &:last-child {
-    margin-right: 0;
+nav {
+  ul > :nth-child(n) {
+    margin-bottom: 2rem;
   }
-}
-
-li {
-  font-size: 2.25rem;
-  text-align: center;
+  .sns__container > li {
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  li {
+    font-size: 2.25rem;
+    text-align: center;
+  }
 }
 </style>

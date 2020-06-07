@@ -1,13 +1,21 @@
 <template>
   <div>
-    <div v-show="isControlActive">
-      <control-nav @clickControlNav="switchControlState" />
+    <div class="relative main">
+      <div
+        class="absolute top-0 z-10 w-full main__nav"
+        :class="{ active: isControlActive }"
+      >
+        <control-nav @clickControlNav="switchControlState" />
+      </div>
+      <div
+        class="absolute top-0 main__content"
+        :class="{ active: isControlActive }"
+      >
+        <nav-bar />
+        <nuxt />
+      </div>
     </div>
-    <div v-show="!isControlActive">
-      <nav-bar />
-      <nuxt />
-    </div>
-    <div class="fixed flex flex-col items-end btn">
+    <div class="fixed z-50 flex flex-col items-end btn">
       <control
         :active="isControlActive"
         @clickControlBtn="switchControlState"
@@ -60,7 +68,7 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
 html {
   font-size: 16px;
 }
@@ -71,5 +79,22 @@ body {
 .btn {
   bottom: 1rem;
   right: 1rem;
+}
+.main {
+  &__nav {
+    transition: 0.6s;
+    opacity: 0;
+    &.active {
+      opacity: 1;
+    }
+  }
+  &__content {
+    transition: 0.6s;
+    z-index: 10;
+    &.active {
+      z-index: 0;
+      filter: blur(2px) opacity(50%);
+    }
+  }
 }
 </style>
